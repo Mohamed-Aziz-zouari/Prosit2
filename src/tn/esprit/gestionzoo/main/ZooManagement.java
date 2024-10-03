@@ -1,4 +1,8 @@
-import java.util.Scanner;;
+package tn.esprit.gestionzoo.main;
+
+import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.Zoo;
+
 class ZooManagement {
     public static void main (String[] args){
 
@@ -46,10 +50,10 @@ class ZooManagement {
 //        myZoo.displayZoo();
 //        //c'est la representation de l'objet myZoo (ID)
 //        System.out.println(myZoo);
-//        //Zoo@568db2f2
+//        //tn.esprit.gestionzoo.entities.Zoo@568db2f2e
 //        System.out.println(myZoo.toString());
-//        //Zoo@568db2f2
-//        //l'affichage de l'objet lion du classe Animal
+//        //tn.esprit.gestionzoo.entities.Zoo@568db2f2
+//        //l'affichage de l'objet lion du classe tn.esprit.gestionzoo.entities.Animal
 //        System.out.println(lion);
 //        System.out.println(lion.toString());
     }
