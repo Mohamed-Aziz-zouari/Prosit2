@@ -7,7 +7,7 @@ class ZooManagement {
 
 
 
-       // Animal lion = new Animal("Félins","Simba" , 7, true);
+        Animal lion = new Animal("Félins","Simba" , 7, true);
         Animal tiger = new Animal("Félins","Dekster" , 5, true);
         Animal giraffe = new Animal("Girafidés", "Geoffrey", 10, true);
         Animal elephant = new Animal("Éléphantidés", "Dimba", 12, true);
@@ -16,11 +16,21 @@ class ZooManagement {
 //
        Zoo myZoo = new Zoo("zizouLand","tunis");
 //
+        try {
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tiger);
+        myZoo.addAnimal(giraffe);
+        myZoo.addAnimal(elephant);
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        }catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
         // myZoo.addAnimal(lion);
-         myZoo.addAnimal(tiger);
-         myZoo.addAnimal(giraffe);
-         myZoo.addAnimal(elephant);
-//
+//         myZoo.addAnimal(tiger);
+//         myZoo.addAnimal(giraffe);
+//         myZoo.addAnimal(elephant);
+////
 //         myZoo.afficheAnimals();
 //         int index = myZoo.searchAnimal(giraffe);
 //         System.out.println(index);
@@ -68,7 +78,7 @@ class ZooManagement {
         //Instruction 22
         Dolphin dolphin1 = new Dolphin("Cetacea", "Flipper", 8, true, "Ocean", 25.0f);
         Penguin penguin1 = new Penguin("Spheniscidae", "Pingu", 5, false, "Antarctic", 100.0f);
-        Terrestrial lion = new Terrestrial("Felidae", "Lion", 12, true, 4);
+        //Terrestrial lion = new Terrestrial("Felidae", "Lion", 12, true, 4);
 //        Aquatic shark = new Aquatic("Selachimorpha", "Shark", 5, false, "Ocean");
 //        Aquatic shark2 = new Aquatic("Selachimorpha", "Shark", 5, false, "Ocean");
 //        Aquatic shark3 = new Aquatic("Selachimorpha", "Shark3", 5, false, "Ocean");
