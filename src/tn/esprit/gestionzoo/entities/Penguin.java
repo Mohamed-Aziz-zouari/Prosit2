@@ -9,6 +9,11 @@ public class Penguin extends Aquatic {
     }
 
     @Override
+    public void swim() {
+        System.out.println("A penguin is swimming");
+    }
+
+    @Override
     public String toString() {
         return "Penguin{" +
                 "swimmingDepth=" + swimmingDepth +

@@ -7,6 +7,7 @@ public class Zoo {
     private String name;
     private String city;
     private static final int nbrCages=25;
+    private int nbrAquatics;
 
     public Zoo( String name, String city) {
         this.animals = new Animal[nbrCages];
@@ -52,15 +53,15 @@ public class Zoo {
         System.out.println("Nbr Cages: " + nbrCages);
     }
 
-    @Override
-    public String toString() {
-        return "tn.esprit.gestionzoo.entities.Zoo{" +
-                "animals=" + Arrays.toString(animals) +
-                ", name='" + name + '\'' +
-                ", city='" + city + '\'' +
-                ", nbrCages=" + nbrCages +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "tn.esprit.gestionzoo.entities.Zoo{" +
+//                "animals=" + Arrays.toString(animals) +
+//                ", name='" + name + '\'' +
+//                ", city='" + city + '\'' +
+//                ", nbrCages=" + nbrCages +
+//                '}';
+//    }
 
     public boolean addAnimal(Animal animal){
         if (isZooFull()){
@@ -143,4 +144,40 @@ public class Zoo {
     }
     }
 
+    public Aquatic aquaticAnimals[] = new Aquatic[10];
+
+    public void addAquaticAnimal(Aquatic aquatic) {
+        aquaticAnimals[nbrAquatics] = aquatic;
+        nbrAquatics++;
+    }
+
+    @Override
+    public String toString() {
+        return "Zoo{" +
+                "aquaticAnimals=" + Arrays.toString(aquaticAnimals) +
+                '}';
+    }
+    public float maxPenguinSwimmingDepth() {
+        float maxDepth = 0f;
+        for (int i = 0; i < nbrAquatics; i++) {
+            if (aquaticAnimals[i] instanceof Penguin penguin) {
+                if (maxDepth < penguin.swimmingDepth)
+                    maxDepth = penguin.swimmingDepth;
+            }
+        }
+        return maxDepth;
+    }
+    public void displayNumberOfAquaticsByType() {
+        int nbrPenguins = 0;
+        int nbrDolphins = 0;
+        for (int i = 0; i < nbrAquatics; i++) {
+            if (aquaticAnimals[i] instanceof Dolphin) {
+                nbrDolphins++;
+            }
+            if (aquaticAnimals[i] instanceof Penguin) {
+                nbrPenguins++;
+            }
+        }
+        System.out.println("Le Zoo " + name + " contient " + nbrDolphins + " dauphins et " + nbrPenguins + " pingouins");
+    }
 }

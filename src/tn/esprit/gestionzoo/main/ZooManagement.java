@@ -7,19 +7,19 @@ class ZooManagement {
 
 
 
-//        Animal lion = new Animal("Félins","Simba" , 7, true);
-//        Animal tiger = new Animal("Félins","Dekster" , 5, true);
-//        Animal giraffe = new Animal("Girafidés", "Geoffrey", 10, true);
-//        Animal elephant = new Animal("Éléphantidés", "Dimba", 12, true);
+       // Animal lion = new Animal("Félins","Simba" , 7, true);
+        Animal tiger = new Animal("Félins","Dekster" , 5, true);
+        Animal giraffe = new Animal("Girafidés", "Geoffrey", 10, true);
+        Animal elephant = new Animal("Éléphantidés", "Dimba", 12, true);
 //
 //        Animal giraffe2 = new Animal("Girafidés", "Geoffrey", 10, true);
 //
-//        Zoo myZoo = new Zoo("zizouLand","tunis");
+       Zoo myZoo = new Zoo("zizouLand","tunis");
 //
-//         myZoo.addAnimal(lion);
-//         myZoo.addAnimal(tiger);
-//         myZoo.addAnimal(giraffe);
-//         myZoo.addAnimal(elephant);
+        // myZoo.addAnimal(lion);
+         myZoo.addAnimal(tiger);
+         myZoo.addAnimal(giraffe);
+         myZoo.addAnimal(elephant);
 //
 //         myZoo.afficheAnimals();
 //         int index = myZoo.searchAnimal(giraffe);
@@ -69,16 +69,31 @@ class ZooManagement {
         Dolphin dolphin1 = new Dolphin("Cetacea", "Flipper", 8, true, "Ocean", 25.0f);
         Penguin penguin1 = new Penguin("Spheniscidae", "Pingu", 5, false, "Antarctic", 100.0f);
         Terrestrial lion = new Terrestrial("Felidae", "Lion", 12, true, 4);
-        Aquatic shark = new Aquatic("Selachimorpha", "Shark", 5, false, "Ocean");
-
+//        Aquatic shark = new Aquatic("Selachimorpha", "Shark", 5, false, "Ocean");
+//        Aquatic shark2 = new Aquatic("Selachimorpha", "Shark", 5, false, "Ocean");
+//        Aquatic shark3 = new Aquatic("Selachimorpha", "Shark3", 5, false, "Ocean");
+        Penguin penguin2 = new Penguin("Spheniscidae", "Pingu", 15, false, "Antarctic", 150.0f);
         //instruction 23
         System.out.println(dolphin1.toString());
         System.out.println(penguin1.toString());
         System.out.println(lion.toString());
-        System.out.println(shark.toString());
+//        System.out.println(shark.toString());
 
         dolphin1.swim();
         penguin1.swim();
+
+//        myZoo.addAquaticAnimal(shark);
+//        myZoo.addAquaticAnimal(shark2);
+//        myZoo.addAquaticAnimal(shark3);
+        myZoo.addAquaticAnimal(dolphin1);
+        myZoo.addAquaticAnimal(penguin1);
+        myZoo.addAquaticAnimal(penguin2);
+        System.out.println(myZoo.toString());
+        myZoo.displayNumberOfAquaticsByType();
+        float max = myZoo.maxPenguinSwimmingDepth();
+        System.out.println(max);
+        boolean equals = penguin2.equals(penguin1);
+        System.out.println(equals);
 
 
 
