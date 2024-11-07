@@ -105,6 +105,8 @@ class ZooManagement {
         boolean equals = penguin2.equals(penguin1);
         System.out.println(equals);
 
+        dolphin1.eatMeat(Food.MEAT);
+        penguin1.eatMeat(Food.MEAT);
 
 
     }

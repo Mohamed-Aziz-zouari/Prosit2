@@ -3,7 +3,7 @@ package tn.esprit.gestionzoo.entities;
 public class Animal {
     protected String family;
     protected String name;
-    protected int age;
+    private int age;
     protected boolean isMammmal;
 
     public Animal(String family, String name, int age, boolean isMammmal) {

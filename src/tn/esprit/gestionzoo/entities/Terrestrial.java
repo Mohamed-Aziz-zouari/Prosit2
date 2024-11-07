@@ -1,6 +1,6 @@
 package tn.esprit.gestionzoo.entities;
 
-public class Terrestrial extends Animal{
+public class Terrestrial extends Animal implements Omnivore <Food>{
     protected int nbrLegs;
 
     public Terrestrial(String family, String name, int age, boolean isMammmal, int nbrLegs) {
@@ -14,8 +14,13 @@ public class Terrestrial extends Animal{
                 "nbrLegs=" + nbrLegs +
                 ", family='" + family + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 ", isMammmal=" + isMammmal +
                 '}';
+    }
+
+    @Override
+    public void eatPlantAndMeet(Food food) {
+        System.out.println("EatPlantAndMeet");
     }
 }

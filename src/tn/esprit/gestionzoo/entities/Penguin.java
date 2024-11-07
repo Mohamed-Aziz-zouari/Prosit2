@@ -20,8 +20,13 @@ public class Penguin extends Aquatic {
                 ", habitat='" + habitat + '\'' +
                 ", family='" + family + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 ", isMammmal=" + isMammmal +
                 '}';
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+        System.out.println("A penguin eats meat");
     }
 }

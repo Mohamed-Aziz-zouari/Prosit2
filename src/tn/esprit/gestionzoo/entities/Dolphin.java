@@ -15,7 +15,7 @@ public class Dolphin extends Aquatic{
                 ", habitat='" + habitat + '\'' +
                 ", family='" + family + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
+                ", age=" + super.getAge() +
                 ", isMammmal=" + isMammmal +
                 '}';
     }
@@ -23,5 +23,10 @@ public class Dolphin extends Aquatic{
     @Override
     public void swim (){
         System.out.println("This dolphin is swimming");
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+        System.out.println("This dolphin eats meat");
     }
 }
